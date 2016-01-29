@@ -36,12 +36,12 @@
    <METRIC>trigrams(a.foaf:name, b.foaf:name)</METRIC>
    <ACCEPTANCE>
       <THRESHOLD>0.7</THRESHOLD>
-      <FILE>accept.nt</FILE>
+      <FILE>../results/accept.nt</FILE>
       <RELATION>owl:sameAs</RELATION>
    </ACCEPTANCE>
    <REVIEW>
       <THRESHOLD>0.7</THRESHOLD>
-      <FILE>review.nt</FILE>
+      <FILE>../results/review.nt</FILE>
       <RELATION>owl:sameAs</RELATION>
    </REVIEW>
    <EXECUTION>Simple</EXECUTION>
