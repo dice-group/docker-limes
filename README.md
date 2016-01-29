@@ -23,6 +23,7 @@ Results will be saved in the ./results folder.
 
 ## Comments
 The results of the LIMES run are saved into ./results folder mounted as a volume. The volumes are mounted on docker host. Therefore this repository as it is right now designated to run on docker host machine.
+Tested on Ubuntu 14.04 with Docker version 1.9.0, build 76d6bc9
 
 ## TODOs
 * Configure continuous delivery with the git repository (under development at the moment): https://github.com/AKSW/LIMES-dev
