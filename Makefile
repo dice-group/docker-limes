@@ -9,3 +9,4 @@ run:
 run-example:
 	cp config/linking-configuration.xml.example config/linking-configuration.xml
 	docker run --rm --name limes -v $(current_dir)results:/results -v $(current_dir)config:/config limes
+	rm config/linking-configuration.xml
