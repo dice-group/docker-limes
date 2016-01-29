@@ -6,4 +6,4 @@ ADD lib /lib
 ADD limes.jar /limes.jar
 ADD limes.dtd /limes.dtd
 
-CMD ["java", "-jar", "/limes.jar", "/config/linking-configuration.xml"]
+CMD ["java", "-Xmx2G", "-jar", "/limes.jar", "/config/linking-configuration.xml"]
