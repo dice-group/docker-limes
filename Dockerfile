@@ -1,5 +1,7 @@
 FROM java:8
 
+ADD lib /lib
 ADD limes.jar /limes.jar
+ADD limes.dtd /limes.dtd
 
-CMD ["java", "-cp", "/limes.jar", "de.uni_leipzig.simba.controller.PPJoinController", "/config/config.xml"]
+CMD ["java", "-jar", "/limes.jar", "/config/dblp-semanticwebresearcher.xml"]
