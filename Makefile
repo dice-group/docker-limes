@@ -1,5 +1,11 @@
+current_dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
 default:
 	docker build -t limes .
 
 run:
-	docker run --name limes -v /home/ivan/Workspace/docker/docker-limes/config:/config limes
+	docker run --rm --name limes -v $(current_dir)config:/config limes
+
+run-example:
+	cp config/linking-configuration.xml.example config/linking-configuration.xml
+	docker run --rm --name limes -v $(current_dir)config:/config limes
