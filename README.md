@@ -1,30 +1,27 @@
-# Docker for LIMES
+# Docker for LIMES (server version)
 
-Assembled from LIMES.0.6.RC4.zip from https://github.com/aksw/limes
+Assembled from LIMES-dev repository from https://github.com/aksw/limes-dev
 
 ## Using
 To build docker file run:
 ```
-    make
+    docker build -t limes .
+```
+
+Start LIMES server:
+```
+    docker run -d --restart=always -p 8080:8080 limes
 ```
 
 For running test-example run:
 ```
-    make run-example
+    $ wget https://raw.githubusercontent.com/AKSW/LIMES-dev/master/limes-core/resources/lgd-lgd.xml
+    $ curl --form "fileupload=@lgd-lgd.xml" http://localhost:8080/execute
+    46839272943
+    $ curl http://localhost:8080/get_status?job_id=46839272943
+    1
+    $ curl http://localhost:8080/get_status?job_id=46839272943
+    2
+    $ curl http://localhost:8080/get_result/?job_id=46839272943&result_type=acceptance > results.txt
+    $ cat results.txt
 ```
-
-For running your own configuration:
-```
-    cp your-own-config.xml ./config/linking-configuration.xml
-    make run
-```
-
-Results of the example configuration will be saved in the ./results folder. For your own configuration, you must point output to the ./results folder. Otherwise, the data will be lost.
-
-## Comments
-The results of the LIMES run are saved into ./results folder mounted as a volume. The volumes are mounted on docker host. Therefore this repository as it is right now designated to run on docker host machine.
-Tested on Ubuntu 14.04 with Docker version 1.9.0, build 76d6bc9
-
-## TODOs
-* Configure continuous delivery with the git repository (under development at the moment): https://github.com/AKSW/LIMES-dev
-* Logging should be written in the same folder as results
