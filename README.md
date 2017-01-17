@@ -1,6 +1,7 @@
 # Docker for LIMES
 
-Assembled from LIMES.0.6.RC4.zip from https://github.com/aksw/limes
+Assembled from LIMES.0.6.RC4.zip from https://github.com/aksw/limes.
+This version of LIMES is deprecated. Use "limes-service" branch for up-to-date version.
 
 ## Using
 To build docker file run:
