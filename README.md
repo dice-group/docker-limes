@@ -21,5 +21,9 @@ For running test-example run:
     $ cat results.txt
 ```
 
-## Using One Time Execution Version
-
+## Using LIMES-CLI version (one time execution) 
+You can run limes-cli by checking out the limes-cli branch:
+```
+    $ git checkout limes-cli
+```
+Follow the instructions provided in the file.
