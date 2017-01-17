@@ -1,16 +1,11 @@
-# Docker for LIMES (server version)
+# Docker for LIMES
 
-Assembled from LIMES-dev repository from https://github.com/aksw/limes-dev
+Assembled from LIMES-dev repository from https://github.com/aksw/limes-dev and LIMES repository (older version).
 
-## Using
-To build docker file run:
-```
-    docker build -t limes .
-```
-
+## Using Server Version
 Start LIMES server:
 ```
-    docker run -d --restart=always -p 8080:8080 limes
+    docker run -d --restart=always -p 8080:8080 aksw/limes:limes-service
 ```
 
 For running test-example run:
@@ -25,3 +20,6 @@ For running test-example run:
     $ curl http://localhost:8080/get_result/?job_id=46839272943&result_type=acceptance > results.txt
     $ cat results.txt
 ```
+
+## Using One Time Execution Version
+
